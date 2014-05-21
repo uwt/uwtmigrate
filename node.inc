@@ -15,9 +15,7 @@ class UWTPageMigration extends Migration {
     $result->fields('t', array('entity_id'));
     $result->fields('b', array('body_value', 'body_format', 'body_summary'));
     $result->condition('field_site_tid', 1368); // <-- Change this tid
-
     $this->source = new MigrateSourceSQL($result);
-
     $this->destination = new MigrateDestinationNode('page');
     
     $this->map = new MigrateSQLMap($this->machineName,
