@@ -1,0 +1,13 @@
+name = "Migrate from UWT D7"
+description = "Module to migrate from UWT D7 into new multisite"
+package = "Migration"
+core = 7.x
+hidden = TRUE
+
+dependencies[] = migrate
+dependencies[] = migrate_d2d
+
+# include the files that contain your Migrate classes
+files[] = uwtmigrate.migrate.inc
+files[] = node.inc
+files[] = user.inc
